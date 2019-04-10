@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ClientDemo1/ClientDemo1.iml" filepath="$PROJECT_DIR$/ClientDemo1/ClientDemo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CommonServices/CommonServices.iml" filepath="$PROJECT_DIR$/CommonServices/CommonServices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EurekaRegisterService/EurekaRegisterService.iml" filepath="$PROJECT_DIR$/EurekaRegisterService/EurekaRegisterService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ServiceDemo1/ServiceDemo1.iml" filepath="$PROJECT_DIR$/ServiceDemo1/ServiceDemo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringCloudParent.iml" filepath="$PROJECT_DIR$/SpringCloudParent.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,13 @@
+datasource-druid:
+  url: jdbc:mysql://172.168.63.232:3307/test?characterEncoding=utf-8
+  driver-class-name: com.mysql.jdbc.Driver
+  password: root
+  username: root
+  connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+  minIdle: 5
+  useGlobalDataSourceStat: true
+  validationQuery: SELECT 1
+
+mybatis:
+  mapper-locations: classpath*:com/xie/mapper/*.xml
+  type-aliases-package: com.xie.bean
