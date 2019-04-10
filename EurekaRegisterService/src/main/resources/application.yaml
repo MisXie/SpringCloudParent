@@ -1,0 +1,9 @@
+server:
+  port: 8089
+spring:
+  application:
+    name: eurekaRegisterCenter
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:${server.port}/eureka

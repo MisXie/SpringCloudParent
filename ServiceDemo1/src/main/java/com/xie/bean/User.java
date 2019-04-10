@@ -1,30 +1,26 @@
 package com.xie.bean;
 
+import lombok.ToString;
 import org.springframework.stereotype.Component;
-import tk.mybatis.mapper.annotation.KeySql;
 
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
  * Created by Administrator on 2019-04-10.
  */
 @Table(name = "t_user")
+@Entity(name = "t_user")
+@ToString
 public class User {
 
   @Id
-  @KeySql(useGeneratedKeys = true)
+ // @KeySql(useGeneratedKeys = true)
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
-
-  private String userName;
-
+  private String username;
   private String password;
-
-  private String name;
-
   private Integer age;
-
   // 性别，1男性，2女性
   private Integer sex;
 
