@@ -1,9 +1,12 @@
 package com.xie.bean;
 
+import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -12,7 +15,9 @@ import java.util.Date;
 @Table(name = "t_user")
 @Entity(name = "t_user")
 @ToString
-public class User {
+@Setter
+@Getter
+public class User{
 
   @Id
  // @KeySql(useGeneratedKeys = true)

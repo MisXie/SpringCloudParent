@@ -1,5 +1,7 @@
 server:
   port: 8081
+  tomcat:
+    max-http-header-size: 8900
 spring:
   application:
     name: serviceDemo1
@@ -17,4 +19,4 @@ spring:
     data: classpath:data.sql
 logging:
   level:
-    root: debug
+    root: info
