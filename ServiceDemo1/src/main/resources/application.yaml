@@ -1,13 +1,20 @@
-datasource-druid:
-  url: jdbc:mysql://172.168.63.232:3307/test?characterEncoding=utf-8
-  driver-class-name: com.mysql.jdbc.Driver
-  password: root
-  username: root
-  connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
-  minIdle: 5
-  useGlobalDataSourceStat: true
-  validationQuery: SELECT 1
-
-mybatis:
-  mapper-locations: classpath*:com/xie/mapper/*.xml
-  type-aliases-package: com.xie.bean
+server:
+  port: 8081
+spring:
+  application:
+    name: serviceDemo1
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    platform: h2
+    url: jdbc:h2:mem:h2test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password:
+    schema: classpath:schema.sql
+    data: classpath:data.sql
+logging:
+  level:
+    root: debug

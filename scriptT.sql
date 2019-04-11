@@ -24,14 +24,3 @@
   // 备注
   private String note;
   
-  create table if not exists t_user(
-	id int(11) primary key auto_increment
-	username varchar(32)
-	password varchar(32)
-	age int(3)
-	sex int(1)
-	birthday datetime
-	created datetime
-	updated datetime
-	note varchar(255)
-  )charset=utf-8

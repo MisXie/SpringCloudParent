@@ -1,3 +1,4 @@
+/*
 package com.xie.dataSource;
 
 import com.alibaba.druid.pool.DruidDataSource;
@@ -14,8 +15,8 @@ import javax.sql.DataSource;
 @Slf4j
 @Getter
 @Setter
-@Configuration
-@ConfigurationProperties(prefix = "datasource-druid")
+//@Configuration
+//@ConfigurationProperties(prefix = "datasource-druid")
 public class DruidSource {
 
   private String url;
@@ -42,4 +43,4 @@ public class DruidSource {
     datasource.setValidationQuery(validationQuery);
     return datasource;
   }
-}
+}*/

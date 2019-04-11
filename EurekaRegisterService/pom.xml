@@ -19,17 +19,35 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+
     </properties>
 
     <dependencies>
+        <!-- Eureka服务端 -->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
+
     </dependencies>
 
     <build>
+        <resources>
+            <!--mybatis 资源文件打包到dao-->
+            <resource>
+                <directory>src/main/java/com/xie/mapper</directory>
+                <includes>
+                    <include>*.xml</include>
+                </includes>
+                <targetPath>com/xie/mapper</targetPath>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+            </resource>
+        </resources>
     </build>
+
 </project>
