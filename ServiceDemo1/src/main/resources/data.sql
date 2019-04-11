@@ -1,2 +1,3 @@
 insert into t_user (username,password,age,sex,birthday,updated,note) values ('小吴','111111',22,2,parsedatetime('1996-2-24', 'yyyy-MM-dd'),null,'pretty gril');
 insert into t_user (username,password,age,sex,birthday,updated,note) values ('小刘','111111',22,2,parsedatetime('1993-8-24', 'yyyy-MM-dd'),null,'handsome boy');
+insert into t_user (username,password,age,sex,birthday,updated,note) values ('aa','111111',22,2,parsedatetime('1993-8-24', 'yyyy-MM-dd'),null,'handsome boy');

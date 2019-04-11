@@ -1,5 +1,6 @@
 package com.xie.controller;
 
+import com.xie.ResponseObj;
 import com.xie.bean.User;
 import com.xie.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,25 +19,23 @@ public class UserController {
   UserDao userDao;
 
   @GetMapping("/getuser/{id}")
-  public String getUser(@PathVariable("id") long id) {
+  public ResponseObj getUser(@PathVariable("id") long id) {
     if (userDao.existsById(id)) {
-      return userDao.getOne(id).toString();
+      return new ResponseObj(userDao.getOne(id),"",true);
+    }else {
+      return new ResponseObj(userDao.getOne(id),"不存在该用户",false);
     }
-    return "不存在该用户";
   }
 
   @GetMapping("/findalluser")
   public Object findAllUser() {
     List<User> users = userDao.findAll();
-    System.out.println(users);
-    List<String> userss = new ArrayList<>();
-    userss.add(users.get(0).toString());
-    userss.add(users.get(1).toString());
-    return users;
+    return new ResponseObj(users,"",true);
   }
 
   @GetMapping("/findalluserlike/{like}")
   public Object findAllUserLike(@PathVariable("like") String like) {
-    return userDao.findByUsernameLike(like);
+    List<User> users =  userDao.findByUsernameLike("%"+like+"%");
+    return new ResponseObj(users,"",true);
   }
 }

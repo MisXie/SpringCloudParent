@@ -12,12 +12,11 @@ import java.util.Date;
 /**
  * Created by Administrator on 2019-04-10.
  */
-@Table(name = "t_user")
 @Entity(name = "t_user")
 @ToString
 @Setter
 @Getter
-public class User{
+public class User {
 
   @Id
  // @KeySql(useGeneratedKeys = true)
