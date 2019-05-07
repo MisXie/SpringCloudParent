@@ -20,7 +20,7 @@ public class ResponseObj {
     this.desc = desc;
     this.status = status;
   }
-  private Object object;
+  public Object object;
 
   private String desc;
 

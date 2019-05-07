@@ -7,3 +7,7 @@ eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:${server.port}/eureka
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
